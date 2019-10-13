@@ -3,6 +3,6 @@ class SimpleGisto extends React.Component {
 		super();
 	}
 	render() {
-		return React.createElement('div', null, 'Пока-пока');
+		return React.createElement('div', null, 'Какой то текст');
 	}
 }
