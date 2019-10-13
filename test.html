@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Hello World</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+	<script src="/graph.js"></script>
+	<style>
+		#wrapper{
+			height: calc(100vh - 20px);
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+
+		}
+
+		#wrapper > div{
+			flex: 1 1 50%;
+			outline: 1px solid #000;
+			margin: 10px;
+			align-self: stretch;
+		}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+	<div id="ussr"></div>
+	<div id="usa"></div>
+</div>
+
+
+<script type="text/javascript">
+	let $ussr = {
+		1960: 9,
+		1961: 9,
+		1962: 22,
+		1963: 24,
+		1964: 36,
+		1965: 53,
+		1966: 51,
+		1967: 74,
+		1968: 79,
+		1969: 82,
+	};
+
+	let $usa = {
+		1960: 29,
+		1961: 41,
+		1962: 59,
+		1963: 46,
+		1964: 64,
+		1965: 70,
+		1966: 77,
+		1967: 60,
+		1968: 48,
+		1969: 41,
+	};
+
+	ReactDOM.render(
+		React.createElement(SimpleGisto, {data: $ussr, name: 'ussr'}, null),
+		document.getElementById('ussr')
+	);
+
+	ReactDOM.render(
+		React.createElement(SimpleGisto, {data: $usa, name: 'usa'}, null),
+		document.getElementById('usa')
+	);
+</script>
+
+</body>
+</html>
