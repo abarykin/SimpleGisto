@@ -1,7 +1,7 @@
 class SimpleGistoItem extends React.Component {
 	render() {
 		return (
-			<li style={this.props.style}>{this.props.index}</li>
+			<li style={this.props.style}>{this.props.index} - {this.props.value} </li>
 		)
 	}
 }
